@@ -1,0 +1,21 @@
+diamond v2.0.15.153 (C) Max Planck Society for the Advancement of Science
+Documentation, support and updates available at http://www.diamondsearch.org
+Please cite: http://dx.doi.org/10.1038/s41592-021-01101-x Nature Methods (2021)
+
+#CPU threads: 12
+Scoring parameters: (Matrix=BLOSUM45 Lambda=0.195 K=0.032 Penalties=14/2)
+Database input file: virus_subset.fa
+Opening the database file...  [0s]
+Loading sequences...  [0s]
+Masking sequences...  [0.023s]
+Writing sequences...  [0s]
+Hashing sequences...  [0s]
+Loading sequences...  [0s]
+Writing trailer...  [0s]
+Closing the input file...  [0s]
+Closing the database file...  [0s]
+
+Database sequences  82
+  Database letters  120154
+     Database hash  c6ead639f9cca21d345147e04111b560
+        Total time  0.025000s
