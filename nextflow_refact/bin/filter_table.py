@@ -96,7 +96,7 @@ def filter_blast(blast_result, rangejunction, tag):
             .sort_values(by=["qseqid"])
         )
         final_filtred_file.to_csv(
-            f"{blast_result}.filtred", sep="\t", index=False, columns=header
+            f"{blast_result}.filtred.{tag}", sep="\t", index=False, columns=header
         )
         if tag == "EE":
             final_filtred_file.to_csv(

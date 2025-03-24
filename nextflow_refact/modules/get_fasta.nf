@@ -1,12 +1,12 @@
 process  GET_FASTA{
-    publishDir "./results/tmp/", mode: "copy", overwrite: true
+    publishDir "./results/tmp/${genome}", mode: "copy", overwrite: true
 
     input:
-    path input_file
-    path bed_file
+    tuple val(genome), path(input_file)
+    tuple val(bed), path(bed_file)
 
     output:
-    path "${input_file}.fasta", emit: fasta
+    tuple val(genome), path("${input_file}.fasta"), emit: fasta
 
     script:
     """

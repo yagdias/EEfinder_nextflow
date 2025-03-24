@@ -1,15 +1,15 @@
 process REMOVE_SHORT {
-    publishDir "./results/tmp/", mode: "copy", overwrite: true
+    publishDir "./results/tmp/${genome}", mode: "copy", overwrite: true
 
     input:
-    path genome
+    tuple val(genome), path(genomepath)
     val cutoff
 
     output:
-    path "${genome}.fmt", emit: genome_fmt
+    tuple val(genome), path("${genomepath}.fmt"), emit: genome_fmt
 
     script:
     """
-    remove_short.py --input_file ${genome} --cutoff ${cutoff}
+    remove_short.py --input_file ${genomepath} --cutoff ${cutoff}
     """
 }

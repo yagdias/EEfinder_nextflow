@@ -1,13 +1,12 @@
 process CREATE_DB {
-    
     publishDir "./results/tmp/${db}", mode: "copy", overwrite: true
+    tag "$db"
     
     input:
     file db
 
     output:
-    path db, emit: fasta
-    path "${db}.*", optional: true, emit: index
+    tuple path(db), path("${db}.*")
 
     script:
     if (params.mode == 'blastx') {

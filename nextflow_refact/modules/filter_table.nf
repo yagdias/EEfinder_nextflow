@@ -1,14 +1,14 @@
 process FILTER_TABLE {
-    publishDir "./results/tmp/", mode: "copy", overwrite: true
+    publishDir "./results/tmp/${genome}", mode: "copy", overwrite: true
 
     input:
-    path blast_result
+    tuple val(genome), path(blast_result)
     val rangejunction
     val tag
 
     output:
-    path "${blast_result}.filtred", emit: blast_result_filtred
-    path "${blast_result}.filtred.bed", emit: bed
+    tuple val(genome), path("${blast_result}.filtred.{EE,HOST}"), emit: blast_result_filtred
+    tuple val(genome), path("${blast_result}.filtred.bed"), optional: true, emit: bed
 
     script:
     """
