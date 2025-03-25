@@ -2,13 +2,16 @@
 
 EEfinder_nextflow is a refactored pipeline based on the [EEfinder tool](https://github.com/WallauBioinfo/EEfinder). It automates various tasks related to the identification of Endogenous Elements in Eukaryotic genomes.
 
+#### Requirements
+Besides Nextflow and its dependencies, `EEfinder_nextflow` requires the Conda package management system.
+
 #### Install
 
 EEfinder was developed and tested with BLAST 2.5.0 and DIAMOND 2.0.15, they are implemented on conda environments
 
 ```bash
 git clone https://github.com/yagdias/EEfinder_nextflow.git
-cd EEfinder
+cd EEfinder_nextflow
 conda env create -f env.yml
 ```
 #### Test line
