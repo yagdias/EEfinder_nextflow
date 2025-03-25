@@ -7,7 +7,7 @@ EEfinder_nextflow is a refactored pipeline based on the [EEfinder tool](https://
 EEfinder was developed and tested with BLAST 2.5.0 and DIAMOND 2.0.15, they are implemented on conda environments
 
 ```bash
-git clone https://github.com/WallauBioinfo/EEfinder.git
+git clone https://github.com/yagdias/EEfinder_nextflow.git
 cd EEfinder
 conda env create -f env.yml
 ```
