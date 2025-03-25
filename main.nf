@@ -1,3 +1,5 @@
+nextflow.enable.dsl=2
+
 include { CREATE_DB as CREATE_DB_EE } from './modules/create_db.nf'
 include { CREATE_DB as CREATE_DB_HOST } from './modules/create_db.nf'
 include { REMOVE_SHORT } from './modules/remove_short.nf'
